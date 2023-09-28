@@ -4,28 +4,22 @@
  * An animal with a name and color
  */
 class Animal {
-    constructor(species = "Cat", color = "green") {
-        this.species = species;
-        this.color = color;
+    constructor(species = "Cat", color = "green", sound = "Meaow") {
+        this.species = species
+        this.color = color
+        this.sound = sound
     }
 
     makeSound() {
-        const spcs = this.species.toLowerCase();
-
-        if (spcs === "cat") {
-            alert("meaow")
-        } else if (spcs === "dog") {
-            alert("bark")
-        }
+        alert(this.sound)
     }
 }
 
 function main() {
     const button = document.getElementById('btn')
 
-    const cat = new Animal()
-    const dog = new Animal("dog")
-
+    const cat = new Animal('Cat', 'red', 'Meaow')
+    const dog = new Animal("Dog", 'White with spots', 'bark')
 
     button.onclick = (ev) => {
         cat.makeSound()
